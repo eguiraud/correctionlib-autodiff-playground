@@ -1,0 +1,3 @@
+[submodule "correctionlib"]
+	path = correctionlib
+	url = git@github.com:eguiraud/correctionlib.git
