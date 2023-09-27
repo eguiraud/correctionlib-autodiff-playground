@@ -18,4 +18,6 @@ inputs = {
     "x": jnp.float32(1.0),
     "y": jnp.float32(2.0),
 }
-print(jax.grad(partial(compute, ast))(inputs))
+
+evaluator = jax.jit(jax.value_and_grad(partial(compute, ast)))
+print(evaluator(inputs))
